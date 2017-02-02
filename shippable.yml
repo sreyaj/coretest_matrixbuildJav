@@ -9,13 +9,13 @@ env:
   - test1=genexec1
 matrix:
   include:
-    - oraclejdk8
+    - jdk: oraclejdk8
       env:
         - test2=genexec2
-    - openjdk7
+    - jdk: openjdk7
       env: ship@=test
   exclude:
-    - oraclejdk7
+    - jdk: oraclejdk7
       env:
         - test1=genexec1
   allow_failures:
