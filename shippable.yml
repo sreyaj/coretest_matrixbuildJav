@@ -1,8 +1,25 @@
 language: java
 
 jdk:
+  - openjdk6
+  #- openjdk7
   - oraclejdk7
-
+  #- oraclejdk8
+env:
+  - test1=genexec1
+matrix:
+  include:
+    - oraclejdk8
+      env:
+        - test2=genexec2
+    - openjdk7
+      env: ship@=test
+  exclude:
+    - oraclejdk7
+      env:
+        - test1=genexec1
+  allow_failures:
+    - openjdk7
 build:
   advancedReporting: true
   ci:
@@ -10,3 +27,6 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+  cache: true
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR/shippable.yml
