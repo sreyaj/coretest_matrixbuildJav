@@ -61,7 +61,7 @@ integrations:
           #- sreya
         - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
-      #on_start: always
+      on_start: always
       on_success: always 
       on_failure: always 
        
@@ -71,7 +71,7 @@ integrations:
       recipients:
         - "chat.freenode.net#test-irc"
         - "chat.freenode.net#test1-irc"
-      #on_start: always
+      on_start: always
       on_success: always      
       on_failure: always   
     
@@ -82,17 +82,17 @@ integrations:
         - '#shiptestpvt'
      # - '#Pillar%20of%20Autumn'
         - '@shiphitchcock1'
-      #on_start: always
+      on_start: always
       on_success: always
       on_failure: always
      
-    - integrationName: project-trigger  
+    - integrationName: generic-webhook  
       type: webhook
       payload:
         - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
         - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
         
-    - integrationName: generic-webhook
+    - integrationName: project-trigger
       type: webhook
       payload:
         - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
