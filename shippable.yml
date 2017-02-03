@@ -62,7 +62,7 @@ integrations:
       on_failure: always 
       on_pull_request: always 
      
-    - integrationName: irc   
+    - integrationName: irc    
       type: irc
       recipients:
         - "chat.freenode.net#test-irc"
