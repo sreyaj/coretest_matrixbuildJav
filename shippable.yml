@@ -19,7 +19,7 @@ matrix:
       env:
         - test1=genexec1
   allow_failures:
-    - openjdk7
+    - jdk: openjdk7
 build:
   advancedReporting: true
   ci:
