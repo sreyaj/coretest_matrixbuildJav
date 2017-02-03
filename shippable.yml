@@ -55,12 +55,12 @@ integrations:
       type: email        
       recipients: 
           #- sreya
-        - sreyaj10@gmail.com
-        - sreya@shippable.com
+        - shiptest.rc.ow@gmail.com
+        - shiptest.rc.me@gmail.com
       on_start: always
       on_success: always 
       on_failure: always 
-      on_pull_request: always 
+       
      
     - integrationName: irc    
       type: irc
@@ -70,16 +70,15 @@ integrations:
       on_start: always
       on_success: always      
       on_failure: always   
-      on_pull_request: always 
-     
+    
     - integrationName: ship-hipchat
       type: hipchat
       recipients:
        # - '#n1'
-        - '#testing'
+        - '#shiptestpvt'
      # - '#Pillar%20of%20Autumn'
-        - '@shiphitchcock4'
+        - '@shiphitchcock1'
       on_start: always
       on_success: always
       on_failure: always
-      on_pull_request: always  
+      
