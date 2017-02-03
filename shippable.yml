@@ -29,7 +29,7 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
-    - thy
+   
     
    # - git push -f git@heroku.com:$APP_NAME.git master #heroku without toolbelt
   cache: true
