@@ -36,7 +36,7 @@ build:
     - $SHIPPABLE_BUILD_DIR/shippable.yml
 integrations:    
   notifications:
-    - integrationName: ship-slack
+    - integrationName: ship-slack 
       type: slack
       recipients:
         #- "#sreya"
