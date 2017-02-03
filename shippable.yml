@@ -85,4 +85,14 @@ integrations:
       #on_start: always
       on_success: always
       on_failure: always
-      
+     
+    - integrationName: project-trigger  
+      type: webhook
+      payload:
+        - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
+        - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
+        
+    - integrationName: generic-webhhok
+      type: webhook
+      payload:
+        - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
