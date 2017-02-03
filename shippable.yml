@@ -97,3 +97,4 @@ integrations:
       payload:
         - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
       on_start: always
+      on_success: always
