@@ -32,9 +32,9 @@ build:
     
     
    # - git push -f git@heroku.com:$APP_NAME.git master #heroku without toolbelt
-  cache: true
-  cache_dir_list: 
-    - $SHIPPABLE_BUILD_DIR/shippable.yml
+ # cache: true
+ # cache_dir_list: 
+  #  - $SHIPPABLE_BUILD_DIR/shippable.yml
 integrations:    
   notifications:
     - integrationName: ship-slack 
