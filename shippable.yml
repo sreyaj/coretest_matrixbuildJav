@@ -12,7 +12,8 @@ matrix:
   include:
     - jdk: oraclejdk8
       env:
-        - test2=genexec2
+        - APP_NAME=qhodeheroku2
+       # - test2=genexec2
     - jdk: openjdk7
       env: ship@=test
   exclude:
