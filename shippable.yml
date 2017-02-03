@@ -86,11 +86,11 @@ integrations:
       on_success: always
       on_failure: always
      
-    - integrationName: generic-webhook  
-      type: webhook
-      payload:
-        - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
-        - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
+   # - integrationName: generic-webhook  
+   #   type: webhook
+   #   payload:
+   #     - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
+   #     - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
         
     - integrationName: project-trigger
       type: webhook
