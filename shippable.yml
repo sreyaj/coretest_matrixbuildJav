@@ -29,6 +29,7 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+    - thy
     
    # - git push -f git@heroku.com:$APP_NAME.git master #heroku without toolbelt
   cache: true
@@ -98,3 +99,4 @@ integrations:
         - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
       on_start: always
       on_success: always
+      on_failure: always
