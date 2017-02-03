@@ -1,0 +1,3 @@
+[submodule "SampleNod"]
+	path = SampleNod
+	url = https://github.com/shiptest-rc-ow/SampleNod.git
