@@ -6,7 +6,8 @@ jdk:
   - oraclejdk7
   #- oraclejdk8
 env:
-  - test1=genexec1
+  - APP_NAME=qhodeheroku2
+  #- test1=genexec1
 matrix:
   include:
     - jdk: oraclejdk8
@@ -27,6 +28,7 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+    - git push -f git@heroku.com:$APP_NAME.git master//heroku without toolbelt
   cache: true
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
