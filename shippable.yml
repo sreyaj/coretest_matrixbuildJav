@@ -30,7 +30,7 @@ build:
     - mvn install
     - cp -r target shippable/codecoverage
     
-  cache: true
+  cache: false
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
 integrations:    
