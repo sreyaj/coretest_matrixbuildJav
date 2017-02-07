@@ -9,9 +9,9 @@ env:
   - APP_NAME=qhodeheroku2
   #- test1=genexec1
 matrix:
-
-  #  - jdk: openjdk7
-  #    env: ship@=test
+  include:
+    - jdk: openjdk7
+      env: ship@=test
   exclude:
     - jdk: oraclejdk7
       env:
