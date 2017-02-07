@@ -31,8 +31,8 @@ build:
     - cp -r target shippable/codecoverage
     
   cache: true
-  cache_dir_list: 
-    - $SHIPPABLE_BUILD_DIR/shippable.yml
+ # cache_dir_list: 
+ #   - $SHIPPABLE_BUILD_DIR/shippable.yml
 integrations:    
   notifications:
     - integrationName: ship-slack 
