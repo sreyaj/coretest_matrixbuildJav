@@ -29,6 +29,7 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+    - thyy
     
   cache: true
  # cache_dir_list: 
