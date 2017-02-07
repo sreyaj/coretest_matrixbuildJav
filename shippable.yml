@@ -13,8 +13,8 @@ matrix:
     - jdk: oraclejdk8
       env:
         - test2=genexec2
-    - jdk: openjdk7
-      env: ship@=test
+  #  - jdk: openjdk7
+  #    env: ship@=test
   exclude:
     - jdk: oraclejdk7
       env:
@@ -22,15 +22,18 @@ matrix:
       #  - test1=genexec1
   allow_failures:
     - jdk: openjdk7
+    - jdk: oraclejdk7
+
 build:
   #advancedReporting: true
   ci:
     # Create folders for test and code coverage
     - mkdir -p shippable/codecoverage
+    - exit 1
     - mvn install
     - cp -r target shippable/codecoverage
     - docker ps
-    - thyu
+    
   cache: true
  # cache_dir_list: 
  #   - $SHIPPABLE_BUILD_DIR/shippable.yml
