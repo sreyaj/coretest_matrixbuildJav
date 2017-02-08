@@ -2,16 +2,16 @@ language: java
 
 jdk:
   - openjdk6
-  #- openjdk7
+  - openjdk7
   - oraclejdk7     
   #- oraclejdk8
 env:
   - APP_NAME=qhodeheroku2
   #- test1=genexec1
 matrix:
-  include:
-    - jdk: openjdk7
-      env: ship@=test
+ # include:
+ #   - jdk: openjdk7
+  #    env: ship@=test
   exclude:
     - jdk: oraclejdk7
       env:
