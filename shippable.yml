@@ -19,8 +19,7 @@ matrix:
         - APP_NAME=qhodeheroku2  
       #  - test1=genexec1
   allow_failures:
-    - jdk: openjdk6
-   # - jdk: oraclejdk7 
+    - jdk: oraclejdk7 
 build:
   #advancedReporting: true
   ci:
@@ -30,7 +29,7 @@ build:
     - mvn install
     - cp -r target shippable/codecoverage
     - docker ps
-    - if [ "$SHIPPABLE_JDK_VERSION" == "" ]; then foobar; fi
+    - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
     
   cache: true
  # cache_dir_list: 
