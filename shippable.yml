@@ -19,7 +19,7 @@ matrix:
         - APP_NAME=qhodeheroku2  
       #  - test1=genexec1
   allow_failures:
-    - jdk: openjdk7
+    - jdk: openjdk6
    # - jdk: oraclejdk7 
 build:
   #advancedReporting: true
