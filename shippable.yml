@@ -31,9 +31,9 @@ build:
     - docker ps
     - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
     
- # cache: true
- # cache_dir_list: 
-  #  - $SHIPPABLE_BUILD_DIR/shippable.yml
+  cache: false
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR/shippable.yml
 integrations:    
   notifications:
     - integrationName: ship-slack 
