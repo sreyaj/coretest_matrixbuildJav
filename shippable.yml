@@ -33,7 +33,7 @@ build:
     
  # cache: true
  # cache_dir_list: 
-    - $SHIPPABLE_BUILD_DIR/shippable.yml
+  #  - $SHIPPABLE_BUILD_DIR/shippable.yml
 integrations:    
   notifications:
     - integrationName: ship-slack 
