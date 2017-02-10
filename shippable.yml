@@ -5,9 +5,9 @@ jdk:
   #- openjdk7 
   - oraclejdk7 
   - oraclejdk8
+  
 env:
-  - APP_NAME=qhodeheroku2
-  #- test1=genexec1
+  - env=test1
 matrix:
   include:
     - jdk: openjdk7
@@ -16,12 +16,12 @@ matrix:
   exclude:
     - jdk: oraclejdk8
       env:
-        - APP_NAME=qhodeheroku2  
-      #  - test1=genexec1
+        - env=test1 
   allow_failures:
     - jdk: oraclejdk7 
+    
 build:
-  #advancedReporting: true
+  #advancedReporting: true   #by default adavanced reporting is true
   ci:
     # Create folders for test and code coverage
     - mkdir -p shippable/codecoverage
@@ -29,11 +29,12 @@ build:
     - mvn install
     - cp -r target shippable/codecoverage
     - docker ps
-    - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
+    - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi # to make oraclejdk7 fail and this version allows allow_failure
     
   cache: true
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
+    
 integrations:    
   notifications:
     - integrationName: ship-slack 
