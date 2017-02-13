@@ -48,9 +48,9 @@ same as when build complets for on_success also it will trigger webhook of sampl
      - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report goes below that range we will receive notification based on the notification we have configured in yml
  
 2nd cases that need to be verified when we hit rebuild button
-   
-1. cache: true    
-2. cache container    
+1. rebuild   
+2. cache: true    
+3. cache container    
     - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
 
 
