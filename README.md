@@ -48,11 +48,11 @@ same as when build complets for on_success also it will trigger webhook of sampl
      - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report goes below that range we will receive notification based on the notification we have configured in yml
      we will receive notification in following 
 
-     email:  - shiptest.rc.ow@gmail.com
+     email:  - shiptest.rc.ow@gmail.com ,
              - shiptest.rc.me@gmail.com
 
-     irc:    - "chat.freenode.net#test-irc"
-             - "chat.freenode.net#test1-irc"
+     irc:    - "chat.freenode.net#testrc-irc" , 
+             - "chat.freenode.net#testalpha-irc"
 
      slack:   username: shiptest.rc.ow@gmail.com
               pwd: Qhode1234
