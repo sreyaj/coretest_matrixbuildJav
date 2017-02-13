@@ -51,7 +51,7 @@ same as when build complets for on_success also it will trigger webhook of sampl
      - status of the build will be unstable because we have set low coverage alert with unstable status
      
 15. Low coverage alert    
-     - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report goes below that range we will receive notification based on the notification we have configured in yml
+     - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report        goes below that range we will receive notification based on the notification we have configured in yml
      we will receive notification in following 
 
      email:  - shiptest.rc.ow@gmail.com ,
@@ -69,7 +69,7 @@ same as when build complets for on_success also it will trigger webhook of sampl
               https://shiphitchcock.hipchat.com/chat
 
 
-##when we hit rebuild button from UI:
+ ##when we hit rebuild button from UI:
 
 16. rebuild   
 17. cache: true    
@@ -79,13 +79,13 @@ same as when build complets for on_success also it will trigger webhook of sampl
 
 
 
-##go to project setting and clear cache and then trigger a build
+ ##go to project setting and clear cache and then trigger a build
 
 19. clear cache/reset minion    
     - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
      
-#tag and release build 
+ ##tag and release build 
      
 20. Tag build from ui 
     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
