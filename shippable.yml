@@ -76,7 +76,7 @@ integrations:
         - '#rc-private'
         - '#rc-public'
      # - '#Pillar%20of%20Autumn'
-        - '@shiptest-rc-ow'
+        - '@shiptestrcow'
       on_start: always
       on_success: always   
       on_failure: always
