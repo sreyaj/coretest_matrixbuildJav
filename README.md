@@ -6,7 +6,7 @@ This is Sample Java project with Jacoco reports
  
 
 
-##when we hit on build button we can verify following cases
+###Test Cases that are covered in CI build triggering manually:
 
 
 1. Matrix build    
@@ -69,7 +69,7 @@ same as when build complets for on_success also it will trigger webhook of sampl
               https://shiphitchcock.hipchat.com/chat
 
 
- ##when we hit rebuild button from UI:
+ ###Test Cases that are covered when we trigger(rebuild) for 2nd time on the same repo
 
 16. rebuild   
 17. cache: true    
@@ -79,13 +79,13 @@ same as when build complets for on_success also it will trigger webhook of sampl
 
 
 
- ##go to project setting and clear cache and then trigger a build
+ ###Test Case that is covered before that we have to do following -> go to project setting and clear cache and then triggering a webhook/manual build
 
 19. clear cache/reset minion    
     - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
      
- ##tag and release build 
+ ###tag and release build 
      
 20. Tag build from ui 
     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
