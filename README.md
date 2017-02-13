@@ -90,5 +90,3 @@ same as when build complets for on_success also it will trigger webhook of sampl
 20. Tag build from ui 
     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
 21. Release build from github ui
-    
-
