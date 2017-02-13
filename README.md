@@ -19,19 +19,18 @@ This is Sample Java project with Jacoco reports
      - have included one more version openjdk7 along with the env : foo=fubu in matrix. include tag
        env: foo=fubu
 4. Matrix.exclude version + user specified env vars 
-      - Here we exclude version - jdk: oraclejdk8 with envenv=test1
+      - Here we exclude version - jdk: oraclejdk8 with env=test1
 
 5. Matrix.allow_failure version     
    - version oraclejdk7 fails in build ci because of this - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi
-     so we allow filure for this version and the build will mark unstable 
+     so we allow failure for this version 
 
 6. Submodule public    
    - Added public submodule sampleNod which is there in shiptest-rc-ow 
      so whenever sample_jacocomatrix  completes triggering in gitsync we should able to see the submodules sampleNod
 
 7. event trigger project webhook(see payload shows correctly in all cases )    
-    - we have set on_start : always where when sample_jacoccomatrix starts  triggering the project webhhook (sampleNod project will  trigger) check payload given in sample_jacoccomatrix is shown in the sampleNod  on_start build 
-same as when build complets for on_success also it will trigger webhook of sampleNod with payload
+    - we have set on_start : always,on_success:always where when sample_jacoccomatrix starts  triggering the project webhhook (sampleNod project will  trigger) check payload given in sample_jacoccomatrix is shown in the sampleNod for on_start and on_success build 
 
 8. event trigger issue creation(check payload shows correctly)    
     - on_start: always on_success: always , when sample_jacocomatrix builds starts and completes triggering in project(sampleNod) will have issue get created on (on_success and on_start) with the payload given in the sample_jacocomatrix
