@@ -2,11 +2,13 @@
 [![Run Status](https://rcapi.shippable.com/projects/58931fae59ff230f005a7d34/badge?branch=master)](https://rc.shippable.com/projects/58931fae59ff230f005a7d34)
 
 
-Sample Jacoco
+This is Sample Java project with Jacoco reports
  
- Test Sample to test some test cases with sample jacoco project
- Here we have language java for testing jacoco along wi
- 1st cases tests when we hit on build button we can verify following cases
+
+
+##when we hit on build button we can verify following cases
+
+
 1. Matrix build    
      -  when we trigger sample_jacocomatrix project,it will have 3 matrix build 
 
@@ -38,12 +40,16 @@ same as when build complets for on_success also it will trigger webhook of sampl
 10. coverage reports    
     - check wheather the coverage report is showing properly 
 11. coverage badge
-    - check coverage bdge shows properly in github project page properly    , when we click on covergae badge it should take us to project dashboard page
+    - check coverage bdge shows properly in github project page properly, when we click on covergae badge it should take us to project dashboard page
+    
 12. download coverage report    
-     - from coverage tab details click on download  
-13.      
+    - from coverage tab details click on download 
+    
+13. check default pull image (drydock) 
+
 14. Unstable status    
      - status of the build will be unstable because we have set low coverage alert with unstable status
+     
 15. Low coverage alert    
      - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report goes below that range we will receive notification based on the notification we have configured in yml
      we will receive notification in following 
@@ -63,28 +69,26 @@ same as when build complets for on_success also it will trigger webhook of sampl
               https://shiphitchcock.hipchat.com/chat
 
 
-2nd cases that need to be verified when we hit rebuild button
+##when we hit rebuild button from UI:
 
-1. rebuild   
-2. cache: true    
-3. cache container    
+16. rebuild   
+17. cache: true    
+18. cache container    
     - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
 
 
 
 
-3rd case- go to project setting and clear cache and then trigger a build
+##go to project setting and clear cache and then trigger a build
 
-1. clear cache/reset minion    
+19. clear cache/reset minion    
    - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
      
+#tag and release build 
      
-     
-4th case- tag and release build 
-     
-1. Tag build from ui 
+20. Tag build from ui 
     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
-2. Release build from github ui
+21. Release build from github ui
     
 
