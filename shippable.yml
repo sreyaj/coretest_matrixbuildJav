@@ -37,13 +37,14 @@ build:
     
 integrations:    
   notifications:
-    - integrationName: ship-slack 
+    - integrationName: notify-slack 
       type: slack
       recipients:
         #- "#sreya"
         - "#random" 
-        - "#public-chnl" 
-      #on_start: always
+        - "#rc-public" 
+        - "#rc-private"
+      on_start: always
       on_success: always
       on_failure: always
       on_pull_request: always 
@@ -63,19 +64,19 @@ integrations:
     - integrationName: irc    
       type: irc
       recipients:
-        - "chat.freenode.net#test-irc"
-        - "chat.freenode.net#test1-irc"
+        - "chat.freenode.net#test-rc"
+        - "chat.freenode.net#test-alpha"
       on_start: always
       on_success: always      
       on_failure: always   
     
-    - integrationName: ship-hipchat
+    - integrationName: notify-hipchat
       type: hipchat
       recipients:
-       # - '#n1'
-        - '#shiptestpvt'
+        - '#rc-private'
+        - '#rc-public'
      # - '#Pillar%20of%20Autumn'
-        - '@shiphitchcock1'
+        - '@shiptest-rc-ow'
       on_start: always
       on_success: always   
       on_failure: always
