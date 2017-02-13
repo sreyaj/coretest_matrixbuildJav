@@ -9,14 +9,16 @@ jdk:
 env:
   - env=test1
 matrix:
-  include:
+#include this version with the env 
+  include:               
     - jdk: openjdk7
       env: foo=fubu
-  #    env: ship@=test
-  exclude:
+#excludes this version 
+  exclude:             
     - jdk: oraclejdk8
       env:
         - env=test1 
+#allows failure for this version
   allow_failures:
     - jdk: oraclejdk7 
     
@@ -25,7 +27,6 @@ build:
   ci:
     # Create folders for test and code coverage
     - mkdir -p shippable/codecoverage
-    #- exit 1
     - mvn install
     - cp -r target shippable/codecoverage
     - docker ps
@@ -40,20 +41,16 @@ integrations:
     - integrationName: notify-slack 
       type: slack
       recipients:
-        #- "#sreya"
         - "#random" 
         - "#rc-public" 
         - "#rc-private"
       on_start: always
       on_success: always
-      on_failure: always
-      on_pull_request: always 
-      
+      on_failure: always      
       
     - integrationName: email         
       type: email        
       recipients: 
-          #- sreya
         - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
       on_start: always
@@ -75,13 +72,12 @@ integrations:
       recipients:
         - '#rc-private'
         - '#rc-public'
-     # - '#Pillar%20of%20Autumn'
         - '@shiptestrcow'
       on_start: always
       on_success: always   
       on_failure: always
      
-    - integrationName: generic-webhook  
+    - integrationName: generic-webhook   #issue will get created in github samleNod project
       type: webhook
       payload:
         - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
