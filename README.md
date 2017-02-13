@@ -71,22 +71,22 @@ same as when build complets for on_success also it will trigger webhook of sampl
 
 ##when we hit rebuild button from UI:
 
-16.  rebuild   
-17.  cache: true    
-18.  cache container    
-     - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
+16. rebuild   
+17. cache: true    
+18. cache container    
+    - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
 
 
 
 
 ##go to project setting and clear cache and then trigger a build
 
-19.  clear cache/reset minion    
-     - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
+19. clear cache/reset minion    
+    - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
      
 #tag and release build 
      
-20.  Tag build from ui 
-     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
-21.  Release build from github ui
+20. Tag build from ui 
+    - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
+21. Release build from github ui
