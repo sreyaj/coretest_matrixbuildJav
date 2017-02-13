@@ -41,14 +41,22 @@ same as when build complets for on_success also it will trigger webhook of sampl
     - check coverage bdge shows properly in github project page properly    , when we click on covergae badge it should take us to project dashboard page
 12. download coverage report    
      - from coverage tab details click on download  
-     
-13. Unstable status    
+13.      
+14. Unstable status    
      - status of the build will be unstable because we have set low coverage alert with unstable status
-14. Low coverage alert    
+15. Low coverage alert    
      - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report goes below that range we will receive notification based on the notification we have configured in yml
-     
-     
- 
+     we will receive notification in following 
+     email:  - shiptest.rc.ow@gmail.com
+             - shiptest.rc.me@gmail.com
+     irc:    - "chat.freenode.net#test-irc"
+             - "chat.freenode.net#test1-irc"
+     slack:   username: shiptest.rc.ow@gmail.com
+              pwd: Qhode1234
+              team: shiphitchcockteam 
+     hipchat: username: shiptest.rc.ow@gmail.com
+              pwd: qhode1234
+              https://shiphitchcock.hipchat.com/chat
 2nd cases that need to be verified when we hit rebuild button
 
 1. rebuild   
