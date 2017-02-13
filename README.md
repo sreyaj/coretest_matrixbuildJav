@@ -16,7 +16,7 @@ This is Sample Java project with Jacoco reports
      -  In this project there is one userspecified env( - env=test1 )  mentioned in env tag
    
 3. Matrix.include version + user specified env vars     
-     - jdk: openjdk7  have included one more version openjdk7 along with the env : foo=fubu in matrix. include tag
+     - have included one more version openjdk7 along with the env : foo=fubu in matrix. include tag
        env: foo=fubu
 4. Matrix.exclude version + user specified env vars 
       - Here we exclude version - jdk: oraclejdk8 with envenv=test1
