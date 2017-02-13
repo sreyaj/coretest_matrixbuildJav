@@ -46,12 +46,17 @@ same as when build complets for on_success also it will trigger webhook of sampl
      - status of the build will be unstable because we have set low coverage alert with unstable status
 14. Low coverage alert    
      - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report goes below that range we will receive notification based on the notification we have configured in yml
+     
+     
  
 2nd cases that need to be verified when we hit rebuild button
+
 1. rebuild   
 2. cache: true    
 3. cache container    
     - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
+
+
 
 
 3rd case- go to project setting and clear cache and then trigger a build
@@ -59,6 +64,8 @@ same as when build complets for on_success also it will trigger webhook of sampl
 1. clear cache/reset minion    
    - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
+     
+     
      
 4th case- tag and release build 
      
