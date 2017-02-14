@@ -43,13 +43,13 @@ This is Sample Java project with Jacoco reports
     
 12. download coverage report    
     - from coverage tab details click on download 
-    
-13. check default pull image (drydock) 
+13.   status badge
+14. check default pull image (drydock) 
 
-14. Unstable status    
+15. Unstable status    
      - status of the build will be unstable because we have set low coverage alert with unstable status
      
-15. Low coverage alert    
+16. Low coverage alert    
      - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report        goes below that range we will receive notification based on the notification we have configured in yml
      we will receive notification in following 
 
@@ -70,9 +70,9 @@ This is Sample Java project with Jacoco reports
 
  ###Test Cases that are covered when we trigger(rebuild) for 2nd time on the same repo
 
-16. rebuild   
-17. cache: true    
-18. cache container    
+17. rebuild   
+18. cache: true    
+19. cache container    
     - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
 
 
@@ -80,12 +80,12 @@ This is Sample Java project with Jacoco reports
 
  ###Test Case that is covered before that we have to do following -> go to project setting and clear cache and then triggering a webhook/manual build
 
-19. clear cache/reset minion    
+20. clear cache/reset minion    
     - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
      
  ###tag and release build 
      
-20. Tag build from ui 
+21. Tag build from ui 
     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
-21. Release build from github ui
+22. Release build from github ui
