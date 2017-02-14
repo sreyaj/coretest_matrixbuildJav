@@ -34,23 +34,17 @@ This is Sample Java project with Jacoco reports
 
 8. event trigger issue creation(check payload shows correctly)    
     - on_start: always on_success: always , when sample_jacocomatrix builds starts and completes triggering in project(sampleNod) will have issue get created on (on_success and on_start) with the payload given in the sample_jacocomatrix
-9. download job consoles(verify there is no build script and secure envs)    
-     - when build completes triggering click on download job console from runs page
-10. coverage reports    
+
+9. coverage reports    
     - check wheather the coverage report is showing properly 
-11. coverage badge
+10. coverage badge
     - check coverage bdge shows properly in github project page properly, when we click on covergae badge it should take us to project dashboard page
     
-12. download coverage report    
-    - from coverage tab details click on download 
-13.   status badge
-14. check default pull image (drydock) 
-
-15. Unstable status    
-     - status of the build will be unstable because we have set low coverage alert with unstable status
+11. status badge
+12. check default pull image (drydock) 
      
-16. Low coverage alert    
-     - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report        goes below that range we will receive notification based on the notification we have configured in yml
+13. Low coverage alert    
+     - set low coverage alert below some range with unstable status from project setting->runsConfig, then when coverage report  goes below that range we will receive notification based on the notification we have configured in yml
      we will receive notification in following 
 
      email:  - shiptest.rc.ow@gmail.com ,
@@ -68,11 +62,13 @@ This is Sample Java project with Jacoco reports
               https://shiphitchcock.hipchat.com/chat
 
 
+
+
  ###Test Cases that are covered when we trigger(rebuild) for 2nd time on the same repo
 
-17. rebuild   
-18. cache: true    
-19. cache container    
+   
+14. cache: true    
+15. cache container    
     - cache container it cache a particular folder or file. Here we cache  - $SHIPPABLE_BUILD_DIR/shippable.yml
 
 
@@ -80,12 +76,12 @@ This is Sample Java project with Jacoco reports
 
  ###Test Case that is covered before that we have to do following -> go to project setting and clear cache and then triggering a webhook/manual build
 
-20. clear cache/reset minion    
+16. clear cache/reset minion    
     - After completing build with cache: true clear cache from project settings-options page and then trigger the project again 
      it should not cache the build which cached before     
      
  ###tag and release build 
      
-21. Tag build from ui 
+17. Tag build from ui 
     - create a tag build , when we create a tag  from github ui (even if dont give release name )it will trigger          both tag and release build with tag name given    
-22. Release build from github ui
+18. Release build from github ui
