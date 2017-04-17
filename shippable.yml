@@ -1,100 +1,60 @@
 language: java
 
 jdk:
- # - openjdk6
-  #- openjdk7 
+  - openjdk8
+  #- openjdk7    
   - oraclejdk7 
   - oraclejdk8
   
 env:
   - env=test1
-#matrix:
+matrix:
 #include this version with the env 
- # include:               
-  #  - jdk: openjdk7
-   #   env: foo=fubu
+  include:               
+    - jdk: openjdk7
+      env: foo=fubu
+         
 #excludes this version 
-  
-  #exclude:             
-   # - jdk: oraclejdk8
-    #  env:
-     #   - env=test1 
+  exclude:             
+    - jdk: oraclejdk8
+      env:
+        - env=test1 
 #allows failure for this version
-  #allow_failures:
-   # - jdk: oraclejdk7 
-    
+  allow_failures:
+    - jdk: oraclejdk7 
+
+addons:
+  firefox: "25.0"    
 build:
   #advancedReporting: true   #by default adavanced reporting is true
   ci:
     # Create folders for test and code coverage
     - mkdir -p shippable/codecoverage
     - mvn install
+    #- java -version
     - cp -r target shippable/codecoverage
     - docker ps
-   # - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi # to make oraclejdk7 fail and this version allows allow_failure
+    - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi # to make oraclejdk7 fail and this version allows allow_failure
+    - lsb_release -a
+    - docker --version
+    - docker info
     
+    
+
   cache: true
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
     
-#integrations:    
-#  notifications:
- #   - integrationName: notify-slack 
-  #    type: slack
-   #   recipients:
-    #    - "#random" 
-    #    - "#rc-public" 
-     #   - "#rc-private"
-     # on_start: always
-     # on_success: always
-     # on_failure: always      
-      
-    #- integrationName: email         
-     # type: email        
-     # recipients: 
-      #  - shiptest.rc.ow@gmail.com
-      #  - shiptest.rc.me@gmail.com
-      #on_start: always
-      #on_success: always 
-      #on_failure: always 
-       
-     
-    #- integrationName: irc    
-     # type: irc
-     # recipients:
-      #  - "chat.freenode.net#test-rc"
-      #  - "chat.freenode.net#test-alpha"
-      #on_start: always
-      #on_success: always      
-      #on_failure: always   
-    
-   # - integrationName: notify-hipchat
-    #  type: hipchat
-    #  recipients:
- #       - '#rc-private'
- #       - '#rc-public'
- #       - '@shiptestrcow'
- #     on_start: always
- #     on_success: always   
- #     on_failure: always
-     
- #   - integrationName: generic-webhook   #issue will get created in github samleNod project
- #     type: webhook
- #     payload:
- #       - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
- #       - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
- #     on_start: always
- #     on_success: always
- #     on_failure: always   
-        
- #   - integrationName: project-trigger #samplNod project in shiptest-rc-ow will trigger
- #     type: webhook
- #     payload:
-       # - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
- #       - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
- #       - FOO=FUBU
- #       - GOO=GUBU
- #     on_start: always
- #     on_success: always
- #     on_failure: always
+integrations:    
+  notifications:
+         
+    - integrationName: email         
+      type: email        
+      recipients: 
+        - shiptest.rc.ow@gmail.com
+        - shiptest.rc.me@gmail.com
+      sendLogsInEmail : true
+      on_start: always
+      on_success: always 
+      on_failure: always 
  
