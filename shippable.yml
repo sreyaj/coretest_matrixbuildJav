@@ -54,7 +54,7 @@ integrations:
       recipients: 
         - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
-      #sendLogsInEmail : true
+      sendLogsInEmail : true
       on_start: always
       on_success: always 
       on_failure: always 
