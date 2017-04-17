@@ -8,11 +8,11 @@ jdk:
   
 env:
   - env=test1
-matrix:
+#matrix:
 #include this version with the env 
-  include:               
-    - jdk: openjdk7
-      env: foo=fubu
+ # include:               
+  #  - jdk: openjdk7
+   #   env: foo=fubu
          
 #excludes this version 
   #exclude:             
