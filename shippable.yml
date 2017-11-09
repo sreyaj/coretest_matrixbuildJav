@@ -23,7 +23,8 @@ matrix:
 #allows failure for this version
   allow_failures:
     - jdk: oraclejdk9
-    
+git:
+  submodule: false
 build:
   #advancedReporting: true   #by default adavanced reporting is true
   ci:
