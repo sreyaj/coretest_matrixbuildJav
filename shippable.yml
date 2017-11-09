@@ -24,7 +24,7 @@ matrix:
   allow_failures:
     - jdk: oraclejdk9
 git:
-  submodule: false
+  submodules: false
 build:
   #advancedReporting: true   #by default adavanced reporting is true
   ci:
