@@ -41,7 +41,7 @@ build:
     
 integrations:    
   notifications:
-    - integrationName: notify-slack 
+    - integrationName: ship-slack 
       type: slack
       recipients:
         - "#random" 
@@ -70,7 +70,7 @@ integrations:
       #on_success: always      
       #on_failure: always   
     
-    - integrationName: notify-hipchat
+    - integrationName: ship-hipchat
       type: hipchat
       recipients:
         - '#rc-private'
