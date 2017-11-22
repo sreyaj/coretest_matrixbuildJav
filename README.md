@@ -4,7 +4,7 @@ This is Sample Java project with Jacoco reports
  
 
 
-###Test Cases that are covered in CI build triggering manually:
+##Test Cases that are covered in CI build triggering manually:
 
 
 1. Matrix build    
