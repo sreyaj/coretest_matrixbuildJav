@@ -7,7 +7,7 @@ python:
 #  - 3.2
   - 3.6
 env:
-  - env=test1
+  - ENV=test1
   
 matrix:
 #include this version with the env 
@@ -18,5 +18,5 @@ matrix:
   
   exclude:             
     - python: 3.6
-      env: env=test1 
+      env: ENV=test1 
 #
