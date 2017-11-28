@@ -18,6 +18,5 @@ matrix:
   
   exclude:             
     - python: 3.6
-      env:
-        - env=test1 
+      env: env=test1 
 #
