@@ -17,7 +17,7 @@ matrix:
 #excludes this version 
   
   exclude:             
-    - jdk: 3.6
+    - python: 3.6
       env:
         - env=test1 
 #
