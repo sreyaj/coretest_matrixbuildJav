@@ -13,7 +13,7 @@ matrix:
 #include this version with the env 
   include:               
     - jdk: openjdk7
-      env: foo=fubu
+      env: foo=fubu joo=boo
 #excludes this version 
   
   exclude:             
