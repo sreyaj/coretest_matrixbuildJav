@@ -34,6 +34,7 @@ build:
     - cp -r target shippable/codecoverage
     - echo $GOO
     - docker ps
+    - echoo $pr
     - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk9" ]; then foobar; fi # to make oraclejdk7 fail and this version allows allow_failure
     
   cache: true
