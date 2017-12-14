@@ -32,6 +32,7 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+    - echo $GOO
     - docker ps
     - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk9" ]; then foobar; fi # to make oraclejdk7 fail and this version allows allow_failure
     
@@ -99,6 +100,9 @@ integrations:
  #     on_start: always
  #     on_success: always
  #     on_failure: always
+
+
+
 
 
 
